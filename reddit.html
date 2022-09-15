@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Bootstrap demo</title>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+        crossorigin="anonymous"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    </head>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <div class="banner">
+    <img
+      src="/Images/misc/official-header.png"
+      class="banner-img img-fluid mx-auto d-block"
+      alt="Covid Sentiment Header image"
+    />
+  </div>
+  <ul
+    class="nav justify-content-center bg-secondary flex-column flex-sm-row"
+    role="navigation"
+  >
+    <li class="nav-item">
+      <a class="nav-link link-light" aria-current="page" href="index.html"
+        >Home</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="twitter.html">Twitter</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active link-light" href="reddit.html">Reddit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="insta.html">Instagram</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="about-us.html">About us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="analysis.html">Analysis</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="stats.html">Stats</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="timeline.html">Timeline</a>
+    </li>
+  </ul>
+  <body class="bg-dark text-white">
+    <h1>Reddit Data Collection</h1>
+    <div><i>by Tyriq Zvijer</i></div>
+    <p class="para">Reddit is a community forum-based site that was founded on the 23rd of June in 2005. Each forum has the “r/“ tag before its specific topic. Users can join a wide range of topics that interest them. Useful or well-received content can get awards in the form of platinum, gold, or silver “coins.”</p>
+    <h2>Data Collection</h2>  
+    <p class="para">I collected posts from Reddit by scraping the platform. I got access to Reddit’s developer site which allowed me to start using their API. After some testing, I found that the Reddit API had a strict data limitation of 100 posts per query. This did not yield enough data during my initial tests. This meant that I would have to run multiple queries and account for the ones I had already found. After some research, I found an alternative solution in a python wrapper called PRAW (Python Reddit API Wrapper) that helped me get around this limitation. I set up a list of keywords to search for (“covid”, “covid-19”, “coronavirus”, and “covid19”), as well as a list of subreddits to search through (“AskReddit”, ”Coronavirus”, “collapse”, “politics”, “conspiracy”, “news”, “Conservative”, and “democrats”). I used for loops to look for every keyword within each respective subreddit and limited the number of posts returned for each subreddit to 50. I decided on this number because of how long my program took to fully search through my query. A limitation of 100 posts was still not done even after 2 full days. 50 posts reduced that time to a little over 16 hours. In total, the algorithm collected 4,606 comments across those 8 subreddits. I consulted Professor Rich Thompson and made sure that the amount of data returned would be sufficient for our analysis. After the data was cleaned and processed, it was then graphed for visualization.</p>
+    <h2>Data Visualization</h2>
+    <div>
+      <p class="para">All graphs were graphed in R</p>
+    </div>
+    <p class="para">These point plots being nearly identical illustrate that there was an almost equal amount of negative and positive posts at the same time during the period examined. We thought this could be because there was so much news being published daily concerning the pandemic from various sources, with different opinions on matters. Also, because these were scraped indiscriminately regardless of popularity on the site we get an unfiltered view of the posts, as opposed to just examining the top posts from this period.</p>
+    <div>
+      <img src="Images/reddit/NegativeScore-reddit-gpoint.png">
+    </div>
+    <div>
+      <img src="Images/reddit/PositiveGraph-reddit-gpoint.png">
+    </div>
+    <div>
+      <img src="Images/reddit/Compound_Score-reddit-gpoint.png">
+    </div>
+    <p class="para">These point plots being nearly identical illustrate that there was an almost equal amount of negative and positive posts at the same time during the period examined. We thought this could be because there was so much news being published daily concerning the pandemic from various sources, with different opinions on matters. Also, because these were scraped indiscriminately regardless of popularity on the site we get an unfiltered view of the posts, as opposed to just examining the top posts from this period.</p>
+    <p class="para">The compound score is the sum of the positive, negative, and neutral scores and is normalized between -1 and +1. The closer a line is to +1, the more positive it is. This graph reinforces the previous point that sentiment towards covid was very sporadic throughout the pandemic. However, the graph reveals a positive trend in sentiment.</p>
+    <div>
+      <img src="Images/reddit/reddit-sntmnt-bgrph.png">
+    </div>
+    <p class="para">On Reddit, we see a somewhat even split between positive and negative posts, with neutral being the minority. The posts in the subreddits that were observed are often just the title of the news article that is being linked in the post. These titles are tailored by news outlets to make the reader already feel a certain emotion before reading them, so there is no surprise when they are mostly negative or positive as posts like this will garner more attention than one that is neutral.</p>
+    <div>
+      <img src="images/reddit/emo-rel-post.png">
+    </div>
+    <p class="para">With these graphs, we can see the main emotion behind each of the posts that were gathered. As stated before, because most of these post titles share the same title as the article, which is being posted, we can see the sentiments users shared with news outlets. Trust and fear being the most-posted positive and negative emotion respectively, was something to be expected given that the posts mostly consist of article titles. Many headlines ask to trust in different policies and other aspects regarding the pandemic, and also with others to sow fear about policies and rising death tolls. Anticipation was another emotion that was widely posted. Many of these posts probably related to lockdowns being lifted and vaccinations being more readily available.</p>
+    <div>
+      <img src="Images/reddit/covidreddit.png">
+    </div>
+    <h3>Word Cloud</h3>
+    <div>
+      <img src="images/reddit/wordcloud-reddit-better.png">
+    </div>
+    <div><i>This WordCloud is by Kalyssa Harris</i></div>
+  </body>
+</div>
+<hr>
+<footer>For ISTA 498 - Capstone by Rincon, O’Connell, Harris, Zvijer, Barraza</footer>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>

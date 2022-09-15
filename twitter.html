@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Bootstrap demo</title>
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+        crossorigin="anonymous"
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap" rel="stylesheet">
+    </head>
+    <link href="index.css" rel="stylesheet" />
+  </head>
+  <div class="banner">
+    <img
+      src="/Images/misc/LogoMakr-0yJU6n.png"
+      class="banner-img img-fluid mx-auto d-block"
+      alt="Covid Sentiment Header image"
+    />
+  </div>
+  </div>
+  <ul
+    class="nav justify-content-center nav-color flex-column flex-sm-row"
+    role="navigation"
+  >
+    <li class="nav-item">
+      <a class="nav-link link-light" aria-current="page" href="index.html"
+        >Home</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active link-light" href="twitter.html">Twitter</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="reddit.html">Reddit</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="insta.html">Instagram</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="about-us.html">About us</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="analysis.html">Analysis</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="stats.html">Stats</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link link-light" href="timeline.html">Timeline</a>
+    </li>
+  </ul>
+  <body class="background gray-text">
+    <h1>Twitter Data Collection</h1>
+    <div>
+      <i>by Archie Rincon</i>
+    </div>
+    <h2>Data Collection</h2>
+    <p class="para">I collected tweets from Twitter by scraping the platform. I used a library from GitHub called 
+        <a href="https://github.com/twintproject/twint" target="_blank">Twint</a>, 
+        and since Twint only allows up to a week to be scraped, 
+        I needed to set up an algorithm that searched all weeks from March 14, 2020, to February 22, 2022. 
+        I did this by using a loop that stopped at the last week and got every date seven days after March 14, 2020. 
+        It then collected tweets and gave a start date and end date. 
+        In total, this algorithm collected up to 514,283 tweets (after pruning for non-English tweets, 
+        text was processed in Python with <a href="https://pypi.org/project/langdetect/">LangDetect</a>) and searching across eight different hashtags/keywords 
+        ("#Covid", "#COVID19", "#coronavirus", "#covid_19", "Covid", "COVID19", "coronavirus", "covid-19".) 
+        Upon cleanup and processing, the data was given to Duane to process for the sentiment. 
+        Once the data was given sentiment, I was able to visualize the data from there.</p>
+    <h2>Findings - Data Visualization</h2>
+    <div>
+      <a href="https://arctiblaine.github.io/covid19-sentiment-project/site/about.html">All markings on the graphs can be mapped to the dates found here</a>
+    </div>
+    <p class="para">Since the data had multiple values on a day, graphing lines was not an option. With the assistance of Jacob Bellows, Excel calculated the average of every day that had tweets. The only days that were excluded were days that did not have tweets or were outside the date range.</p>
+    <h2>Averages of the Compound Sentiment with Dates</h2>
+    <div>
+      <img class="img-wide" src="Images/twitter/avg-compound-sentiment.png">
+    </div>
+    <p class="para">This is the compound average. The compound score is the sum of positive, negative, and neutral scores and is normalized between -1 and +1. For graphing, this number has been multiplied from -100 and +100. The closer a score lies to +100, the higher the positivity. Inversely, a score closer to -100, the higher the negativity. The graph has been given a regression line, to best describe the behavior of the data. We can see that there is a negative relationship between how Twitter feels about opinions concerning COVID-19 and the time going on.</p>
+    <h2>Averages of the Positive/Negative Sentiment with Dates</h2>
+    <div>
+      <img class="img-wide" src="Images/twitter/avg-neg-sentiment.png">
+    </div>
+    <p class="para">This is the negative average. The negative score is based on a ratio of proportions of the text that fall into the category and should sum up to be close or equal to one. The same goes for the positive score. Both the negative and positive and neutral scores should add up to 1 (or close to it.)</p>
+    <div>
+      <img class="img-wide" src="images/twitter/avg-pos-sntmt.png">
+    </div>
+    <p class="para">"The pos, neu, and neg scores are ratios for proportions of text that fall in each category (so these should all add up to be 1... or close to it with float operation). These are the most useful metrics if you want to analyze the context & presentation of how sentiment is conveyed or embedded in rhetoric for a given sentence." - <a href="https://github.com/cjhutto/vaderSentiment">The VADER GitHub Page</a></p>
+    <h2>How Many Negative/Positive/Neutral Tweets per Hashtag?</h2>
+    <div>
+      <img src="images/twitter/barplot-amt-of-polarity.png">
+    </div>
+    <div>
+      <p class="para">Some notes about the graph:</p>
+    </div>
+    <div>
+      <ul>
+        <li>Red: "covid" and "#covid" polarities amount</li>
+        <li>Green: "covid19" and "#covid19" polarities amount</li>
+        <li>Blue: "coronavirus" and "#coronavirus" polarities amount</li>
+        <li>Yellow: "covid-19" and "#covid_19" polarities amount</li>
+      </ul>
+    </div>
+    <p class="para">What I found unexpected was that there are more positive tweets but the overall compound graph showed that it had a negative slope.</p>
+    <div>
+      <img class="img-wide" src="images/twitter/emotwitter.png">
+    </div>
+    <div>
+      <img class="img-wide" src="images/twitter/covid-relate-twi-post.png">
+    </div>
+    <h3>Word Cloud</h3>
+    <div>
+      <img src="/Images/twitter/twitter-wordcloud-better.png">
+    </div>
+    <div>
+      <i>This WordCloud is by Kalyssa Harris</i>
+    </div>
+    <h3>Methods</h3>
+    <p class="para">All graphs were achieved with R, programmed by me (Archie). All tweets were collected in Python with Twint to scrape Twitter, by me (Archie). All tweets were then processed to determine if they were in English or not using LangDetect in Python, by me (Archie), and given a sentiment score with VADER, by Duane.</p>
+    <div>
+      <p class="para"><a href="https://github.com/Arctiblaine/covid19-sentiment-project">Click here to see program files.</a></p>
+    </div>
+  </body>
+</div>
+<hr>
+<footer>For ISTA 498 - Capstone by Rincon, O’Connell, Harris, Zvijer, Barraza</footer>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+  crossorigin="anonymous"
+></script>
+</body>
+</html>
