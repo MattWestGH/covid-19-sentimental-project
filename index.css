@@ -1,15 +1,21 @@
 /* Heading styles */
 h1 {
   font-size: 40px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   text-align: center;
   font-family: "Andada Pro", serif;
 }
 h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-size: 30px;
   text-align: center;
   font-family: "Andada Pro", serif;
 }
 h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
   text-align: center;
   font-family: "Andada Pro", serif;
 }
@@ -18,6 +24,8 @@ h3 {
 i {
   font-size: 15px;
   font-family: "Andada Pro", serif;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .gray-text {
   color: #303030;
@@ -27,6 +35,23 @@ a {
 }
 a:hover {
   color: rgb(255, 65, 65);
+}
+div {
+  display: flex;
+  justify-content: center;
+}
+p {
+  font-family: "Andada Pro", serif;
+}
+.para {
+  margin-left: 220px;
+  margin-right: 220px;
+  font-size: 19px;
+  margin-bottom: 30px;
+}
+div {
+  display: flex;
+  align-items: center;
 }
 
 /* Nav Styling */
@@ -50,6 +75,7 @@ a:hover {
 }
 .nav {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
 }
 
 /* header and footer */
@@ -67,27 +93,13 @@ footer {
 .background {
   background-color: #eaebed;
 }
+#video {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
 
 /* Image Styling */
 .img-wide {
   width: 700px;
   height: 400px;
-}
-
-div {
-  display: flex;
-  justify-content: center;
-}
-p {
-  font-family: "Andada Pro", serif;
-}
-.para {
-  margin-left: 220px;
-  margin-right: 220px;
-  font-size: 19px;
-  margin-bottom: 30px;
-}
-div {
-  display: flex;
-  align-items: center;
 }
