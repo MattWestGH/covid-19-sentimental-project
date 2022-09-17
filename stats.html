@@ -3,34 +3,46 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <title>Bootstrap demo</title>
-      <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-        crossorigin="anonymous"
+    <title>Statistics</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
       />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
-    </head>
-    <link href="index.css" rel="stylesheet" />
+    <link 
+      rel="preconnect" 
+      href="https://fonts.googleapis.com"
+      >
+    <link 
+      rel="preconnect" 
+      href="https://fonts.gstatic.com"
+      >
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap" 
+      rel="stylesheet"
+      >
+    <link
+     href="index.css"
+    rel="stylesheet"
+    />
   </head>
-  <div class="banner">
+
+  <!-- Banner -->
+  <div 
+    class="banner">
     <img
       src="./Images/misc/LogoMakr-0yJU6n.png"
       class="banner-img img-fluid mx-auto d-block"
       alt="Covid Sentiment Header image"
     />
   </div>
+  <!-- Banner -->
+
+  <!-- Nav Bar -->
   <ul
-    class="nav justify-content-center bg-secondary flex-column flex-sm-row"
+    class="nav justify-content-center nav-color flex-column flex-sm-row"
     role="navigation"
   >
     <li class="nav-item">
@@ -40,121 +52,232 @@
     </li>
     <li class="nav-item">
       <a class="nav-link link-light" href="twitter.html">Twitter</a>
-    </li>
+    </li >
     <li class="nav-item">
       <a class="nav-link link-light" href="reddit.html">Reddit</a>
     </li>
     <li class="nav-item">
       <a class="nav-link link-light" href="insta.html">Instagram</a>
-    </li>
+    </li >
     <li class="nav-item">
       <a class="nav-link link-light" href="about-us.html">About us</a>
-    </li>
+    </li >
     <li class="nav-item">
       <a class="nav-link link-light" href="analysis.html">Analysis</a>
     </li>
     <li class="nav-item">
       <a class="nav-link active link-light" href="stats.html">Stats</a>
-    </li>
-    <li class="nav-item">
+    </li >
+    <li  class="nav-item">
       <a class="nav-link link-light" href="timeline.html">Timeline</a>
     </li>
   </ul>
-  <body class="bg-dark text-white">
+  <!-- Nav Bar -->
+
+  <!-- Body -->
+  <body 
+    class="background gray-text body-font">
+
     <h1>Stats</h1>
-    <div>
+
+    <div class="div-center">
       <i>by Archie Rincon</i>
     </div>
+
     <h2>Amount of Unique Words</h2>
-    <p>Twitter - 32,855 words</p>
-    <p>Reddit - 24,239 words</p>
-    <p>Instagram - 57,506 words</p>
-    <hr>
-    <p>Subtotal - 114,600 words</p>
-    <div>
-      <h2>Top 10 Most Common Words</h2>
+
+    <div class="div-center">
+        <p>
+          Twitter - 32,855 words
+        </p>
     </div>
-      <h3>Twitter</h3>
-      <ol>
-        <li>covid19 - Seen 99,199 times</li>
-        <li>covid - Seen 33,691 times</li>
-        <li>coronavirus - Seen 13,483 times</li>
-        <li>omicron - Seen 6,536 times</li>
-        <li>covid_19 - Seen 6,494 times</li>
-        <li>publichealth - Seen 5,906 times</li>
-        <li>data - Seen 5,527 times</li>
-        <li>data - Seen 5,527 times</li>
-        <li>datascience - Seen 5,467 times</li>
-        <li>analytics - Seen 5,437 times</li>
-      </ol>
-      <h3>Reddit</h3>
-      <ol>
-        <li>covid - Seen 2,834 times</li>
-        <li>coronavirus - Seen 1,165 times</li>
-        <li>vaccine - Seen 1,102 times</li>
-        <li>covid-19 - Seen 983 times</li>
-        <li>cases - Seen 733 times</li>
-        <li>vaccines - Seen 724 times</li>
-        <li>virus - Seen 679 times</li>
-        <li>said - Seen 616 times</li>
-        <li>vaccinated - Seen 607 times</li>
-        <li>deaths - Seen 585 times</li>
-      </ol>
-      <h3>Instagram</h3>
-      <ol>
-        <li>covid19usa - Seen 4,787 times</li>
-        <li>covid19 - Seen 3,855 times</li>
-        <li>coronavirus - Seen 2,069 times</li>
-        <li>covid - Seen 1,574 times</li>
-        <li>covid-19 - Seen 1,278 times</li>
-        <li>pandemic - Seen 977 times</li>
-        <li>covid19news - Seen 831 times</li>
-        <li>quarantine - Seen 736 times</li>
-        <li>stayhome - Seen 674 times</li>
-        <li>corona - Seen 657 times</li>
-      </ol>
-      <div>
+
+    <div class="div-center">
+        <p>
+          Reddit - 24,239 words
+        </p>
+    </div>
+
+    <div class="div-center">
+        <p>
+          Instagram - 57,506 words
+        </p>
+    </div>
+
+    <div class="div-center">
+      <b>Subtotal - 114,600 words</b>
+    </div>
+
+    <div class="div-center">
+      <hr class="small-hr">
+    </div>
+
+    <h2>Top 10 Most Common Words</h2>
+
+    <h3>Twitter</h3>
+
+    <ol id="stats-center">
+        <li class="stats-item">covid19 - Seen 99,199 times</li class="stats-item">
+        <li class="stats-item"><b><u>covid</b></u> - Seen 33,691 times</li class="stats-item">
+        <li class="stats-item"><b><u>coronavirus</b></u> - Seen 13,483 times</li class="stats-item">
+        <li class="stats-item">omicron - Seen 6,536 times</li class="stats-item">
+        <li class="stats-item">covid_19 - Seen 6,494 times</li class="stats-item">
+        <li class="stats-item">publichealth - Seen 5,906 times</li class="stats-item">
+        <li class="stats-item">data - Seen 5,527 times</li class="stats-item">
+        <li class="stats-item">data - Seen 5,527 times</li class="stats-item">
+        <li class="stats-item">datascience - Seen 5,467 times</li class="stats-item">
+        <li class="stats-item">analytics - Seen 5,437 times</li class="stats-item">
+    </ol>
+
+    <h3>Reddit</h3>
+
+    <ol id="stats-center">
+        <li class="stats-item"><b><u>covid</b></u> - Seen 2,834 times</li class="stats-item">
+        <li class="stats-item"><b><u>coronavirus</b></u> - Seen 1,165 times</li class="stats-item">
+        <li class="stats-item">vaccine - Seen 1,102 times</li class="stats-item">
+        <li class="stats-item"><b><u>covid-19</u></b> - Seen 983 times</li class="stats-item">
+        <li class="stats-item">cases - Seen 733 times</li class="stats-item">
+        <li class="stats-item">vaccines - Seen 724 times</li class="stats-item">
+        <li class="stats-item">virus - Seen 679 times</li class="stats-item">
+        <li class="stats-item">said - Seen 616 times</li class="stats-item">
+        <li class="stats-item">vaccinated - Seen 607 times</li class="stats-item">
+        <li class="stats-item">deaths - Seen 585 times</li class="stats-item">
+    </ol>
+
+    <h3>Instagram</h3>
+
+    <ol id="stats-center">
+        <li class="stats-item">covid19usa - Seen 4,787 times</li class="stats-item">
+        <li class="stats-item"><b><u>covid19</u></b> - Seen 3,855 times</li class="stats-item">
+        <li class="stats-item"><b><u>coronavirus</u></b> - Seen 2,069 times</li class="stats-item">
+        <li class="stats-item"><b><u>covid</u></b> - Seen 1,574 times</li class="stats-item">
+        <li class="stats-item"><b><u>covid-19</u></b> - Seen 1,278 times</li class="stats-item">
+        <li class="stats-item">pandemic - Seen 977 times</li class="stats-item">
+        <li class="stats-item">covid19news - Seen 831 times</li class="stats-item">
+        <li class="stats-item">quarantine - Seen 736 times</li class="stats-item">
+        <li class="stats-item">stayhome - Seen 674 times</li class="stats-item">
+        <li class="stats-item">corona - Seen 657 times</li class="stats-item">
+    </ol>
+
+    <div class="div-center">
         <i>The underlined and bolded words are the words that are seen across several platforms</i>
-      </div>
-      <h2>Amount of Total Words</h2>
-      <p>Twitter - 498,045 words</p>
-      <p>Reddit - 187,754 words</p>
-      <p>Instagram - 267,398 words</p>
-      <hr>
-      <p>Subtotal - 953,197 words</p>
-      <h2>Amount of Posts Obtained</h2>
-      <p>Twitter - 514,281 Tweets</p>
-      <p>Reddit - 4,606 Posts</p>
-      <p>Instagram Captions - 5,828 Captions</p>
-      <hr>
-      <p>Subtotal - 524,715 total posts collected</p>
-      <h2>Amounts of Positive, Negative and Neutral Posts</h2>
-      <h3>Twitter</h3>
-      <ol>
-        <li>Positive - 200,676 Tweets</li>
-        <li>Negative - 193,391 Tweets</li>
-        <li>Neutral - 120,214 Tweets</li>
-      </ol>
-      <h3>Reddit</h3>
-      <ol>
-        <li>Positive - 1,749 Posts</li>
-        <li>Negative - 2,099 Posts</li>
-        <li>Neutral - 758 Posts</li>
-      </ol>
-      <h3>Instagram</h3>
-      <ol>
-        <li>Positive - 3,703 Captions</li>
-        <li>Negative - 898 Captions</li>
-        <li>Neutral - 1,227 Captions</li>
-      </ol>
+    </div>
+
+    <h2>Amount of Total Words</h2>
+
+    <div class="div-center">
+      <p>
+        Twitter - 498,045 words
+      </p>
+    </div>
+
+    <div class="div-center">
+      <p>
+        Reddit - 187,754 words
+      </p>
+    </div>
+
+    <div class="div-center">
+      <p>
+        Instagram - 267,398 words
+      </p>
+    </div>
+
+
+    <div class="div-center">
+        <b>Subtotal - 953,197 words</b>
+    </div>
+
+    <div class="div-center">
+      <hr class="small-hr">
+    </div>
+      
+    <h2>Amount of Posts Obtained</h2>
+
+    <div class="div-center">
+      <p>
+        Twitter - 514,281 Tweets
+      </p>
+    </div>
+
+    <div class="div-center">
+      <p>
+        Reddit - 4,606 Posts
+      </p>
+    </div>
+
+    <div class="div-center">
+      <p>
+        Instagram Captions - 5,828 Captions
+      </p>
+    </div>
+
+
+    <div class="div-center">
+      <b>Subtotal - 524,715 total posts collected</b>
+    </div>
+    
+    <div class="div-center">
+      <hr class="small-hr">
+    </div>
+
+    <h2>Amounts of Positive, Negative and Neutral Posts</h2>
+
+    <h3>Twitter</h3>
+
+    <ol id="stats-center">
+        <li class="stats-item">Positive - 200,676 Tweets</li class="stats-item">
+        <li class="stats-item">Negative - 193,391 Tweets</li class="stats-item">
+        <li class="stats-item">Neutral - 120,214 Tweets</li class="stats-item">
+    </ol>
+
+    <h3>Reddit</h3>
+
+    <ol id="stats-center">
+        <li class="stats-item">Positive - 1,749 Posts</li class="stats-item">
+        <li class="stats-item">Negative - 2,099 Posts</li class="stats-item">
+        <li class="stats-item">Neutral - 758 Posts</li class="stats-item">
+    </ol>
+
+    <h3>Instagram</h3>
+
+    <ol id="stats-center">
+        <li class="stats-item">Positive - 3,703 Captions</li class="stats-item">
+        <li class="stats-item">Negative - 898 Captions</li class="stats-item">
+        <li class="stats-item">Neutral - 1,227 Captions</li class="stats-item">
+    </ol>
+
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      For ISTA 498 - Capstone by Rincon, O’Connell, Harris, Zvijer, Barraza
+    </footer> 
+    <!-- Footer -->
+
   </body>
-</div>
-<hr>
-<footer>For ISTA 498 - Capstone by Rincon, O’Connell, Harris, Zvijer, Barraza</footer>
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-  crossorigin="anonymous"
-></script>
-</body>
+  <!-- Body -->
+
+  <!-- Scripts -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"
+    >
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"
+    >
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"
+    >
+  </script>
+  <!-- Scripts -->
 </html>

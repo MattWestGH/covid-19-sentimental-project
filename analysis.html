@@ -1,40 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"
-    />
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>
       Home
     </title>
-    <meta 
-      name="viewport" 
-      content="width=device-width, initial-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
-      crossorigin="anonymous"
-      />
-    <link 
-      rel="preconnect" 
-      href="https://fonts.googleapis.com"
-      />
-    <link 
-      rel="preconnect" 
-      href="https://fonts.gstatic.com"
-      />
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" 
-      rel="stylesheet"
-      />
-    <link 
-      href="index.css" 
-      rel="stylesheet"
-      />
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Andada+Pro&display=swap"
+      rel="stylesheet"/>
+    <link href="index.css" rel="stylesheet" />
   </head>
+
   <div class="banner">
     <img
       src="./Images/misc/LogoMakr-0yJU6n.png"
@@ -43,7 +28,7 @@
     />
   </div>
   <ul
-    class="nav justify-content-center bg-secondary flex-column flex-sm-row"
+    class="nav justify-content-center nav-color flex-column flex-sm-row"
     role="navigation"
   >
     <li class="nav-item">
@@ -87,11 +72,30 @@
       </a>
     </li>
   </ul>
-  <body class="bg-light gray-text">
+
+  <body class="background gray-text body-font">
+    
     <h1>Introduction</h1>
-    <p>As explained on the homepage of the website, the purpose of this project was to discern how certain decisions that were made by the United States Government affected the population's emotions. To accomplish this task we picked 10 important decisions that the government made and then using the dates that the decision occurred, pulled posts from the data that we scraped. VADER was used to calculate the sentiment of those posts and then the data was visualized to discover if the mean was negative, neutral, or positive. Then we ran a Kruskal-Wallis Test to see if there was any significant difference between the means of the decisions made. Lastly, a Dunn's Test was run to do a pairwise comparison to find out specifically which pairs of groups were statistically significantly different.</p>
+
+    <div class="div-center">
+      <p class="para">As explained on the homepage of the website,
+      the purpose of this project was to discern how certain decisions that were made by the United States Government
+      affected the population's emotions. To accomplish this task we picked 10 important decisions that the government
+      made and then using the dates that the decision occurred, pulled posts from the data that we scraped.
+      VADER was used to calculate the sentiment of those posts and then the data was visualized to discover if the mean was negative,
+      neutral, or positive. Then we ran a Kruskal-Wallis Test to see if there was any significant difference between the means
+      of the decisions made. Lastly, a Dunn's Test was run to do a pairwise comparison to find out specifically
+      which pairs of groups were statistically significantly different.</p>
+    </div>
     <h2>Decisions Made</h2>
-    <p>The following 10 decisions are listed in chronological order. More information on each decision can be found here.</p>
+
+    <p class="para">
+      The following 10 decisions are listed in chronological order. 
+      More information on each decision can be found here.
+    </p>
+
+    <br>
+
     <ol>
       <li>Travel Ban: March 11, 2020. Trump announces he is restricting travel from Europe to the United States.</li>
       <li>National Emergency: March 13, 2020. Trump declares a national emergency to free up 50 billion dollars to combat the coronavirus.</li>
@@ -105,36 +109,87 @@
       <li>Shortened Isolation: December 27, 2021. CDC shortens isolation from 10 to 5 days if they do not have symptoms.</li>
     </ol>
     <h2>Null Hypothesis</h2>
-    <p>There is no difference in the sentiment means of the decisions made by the United States Government during the Covid-19 pandemic.</p>
+    <p class="para">
+      There is no difference in the sentiment means of the decisions made by the United States Government during the Covid-19 pandemic.
+    </p>
+
     <h2>Data</h2>
-    <div>Below is the summary statistics of our data</div>
-    <div>
+
+    <div class="div-center">
+      <p class="para">
+        Below is the summary statistics of our data
+      </p>
+    </div>
+
+    <div class="div-center">
       <img src="images/analysis/Analysis1.jpg">
     </div>
-    <p>Below is a graph that displays the average sentiment, standard deviation, and polarity of each decision. A neutral polarity is decided by the score being between -0.05 and 0.05. Anything lower is considered negative, while everything above is positive. This is in conjunction with VADER, which was used to determine the sentiment of each post.</p>
-    <div>
-      <img src="Images/analysis/barplot-govt-dec.png">
+
+    <p class="para">
+      Below is a graph that displays the average sentiment, standard deviation, 
+      and polarity of each decision. A neutral polarity is decided by the score being between -0.05 and 0.05. 
+      Anything lower is considered negative, while everything above is positive. This is in conjunction with VADER, 
+      which was used to determine the sentiment of each post.
+    </p>
+
+    <div class="div-center">
+      <img class="img-large" src="Images/analysis/barplot-govt-dec.png">
     </div>
+
     <h2>Results and Interpretation</h2>
-    <p>Below are the results from the Kruskal-Wallis test. This test was chosen because we have a continuous dependent variable in the compound scores, 10 total categorical groups of independent variables in the decisions, and independence of observations since we only allowed a single post from each respective user. Since our data contains different n values for each decision and is not normally distributed, we would need to perform this test instead of a one-way Anova. We received a p-value much smaller than 0.05 which means there was a statistically significant difference between the sentiment of each decision made. This allows us to reject the null hypothesis.</p>
-    <div>
-      <img src="images/analysis/Analysis3.jpg">
+
+    <p class="para">
+      Below are the results from the Kruskal-Wallis test.
+      This test was chosen because we have a continuous dependent variable in the compound scores,
+      10 total categorical groups of independent variables in the decisions,
+      and independence of observations since we only allowed a single post from each respective user.
+      Since our data contains different n values for each decision and is not normally distributed, 
+      we would need to perform this test instead of a one-way Anova. We received a p-value much smaller than 0.05 which means 
+      there was a statistically significant difference between the sentiment of each decision made. 
+      This allows us to reject the null hypothesis.
+    </p>
+
+    <div class="div-center">
+      <img  src="images/analysis/Analysis3.jpg">
     </div>
-    <p>Below are the results from Dunn’s test. We used this post hoc test to pinpoint which specific means are significant from the others. Here we learned that there was a significant difference between the following decisions made: Booster and Hydroxychloroquine, Booster and National Emergency, Booster and Unemployment, Hydroxychloroquine and National Emergency, Hydroxychloroquine and Unemployment, JJ not Preferred And National Emergency, JJ not Preferred and Unemployment, National Emergency and Shortened Isolation, National Emergency and Stimulus, Shortened Isolation, and Unemployment.</p>
-    <div>
+
+    <p class="para">
+      Below are the results from Dunn’s test. We used this post hoc test to pinpoint which specific means are significant from the others.
+      Here we learned that there was a significant difference between the following decisions made: Booster and Hydroxychloroquine,
+      Booster and National Emergency, Booster and Unemployment, Hydroxychloroquine and National Emergency,
+      Hydroxychloroquine and Unemployment, JJ not Preferred And National Emergency, JJ not Preferred and Unemployment,
+      National Emergency and Shortened Isolation, National Emergency and Stimulus, Shortened Isolation, and Unemployment.
+    </p>
+    
+    <div class="div-center">
       <img src="images/analysis/Analysis4.jpg">
     </div>
-    <div>
-      <img src="images/analysis/analysis5.png">
+
+    <div class="div-center">
+      <img class="img-large" src="images/analysis/analysis5.png">
     </div>
-  </body>
 </div>
+
 <hr>
-<footer>For ISTA 498 - Capstone by Rincon, O’Connell, Harris, Zvijer, Barraza</footer>
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-  crossorigin="anonymous"
-></script>
+
+<footer>
+  For ISTA 498 - Capstone by Rincon, O’Connell, Harris, Zvijer, Barraza
+</footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>

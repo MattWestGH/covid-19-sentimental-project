@@ -1,29 +1,25 @@
 /* Heading styles */
 h1 {
-  font-size: 40px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  font-size: 35px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
-  font-family: "Andada Pro", serif;
 }
 h2 {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 25px;
   text-align: center;
-  font-family: "Andada Pro", serif;
 }
 h3 {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   text-align: center;
-  font-family: "Andada Pro", serif;
 }
 
 /* Text Styles */
 i {
   font-size: 15px;
-  font-family: "Andada Pro", serif;
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -31,27 +27,23 @@ i {
   color: #303030;
 }
 a {
-  color: red;
+  color: rgb(210, 0, 0);
+  font-size: 18px;
+  transition: 0.5s;
 }
 a:hover {
   color: rgb(255, 65, 65);
 }
-div {
+.div-center {
   display: flex;
   justify-content: center;
-}
-p {
-  font-family: "Andada Pro", serif;
 }
 .para {
   margin-left: 220px;
   margin-right: 220px;
   font-size: 19px;
-  margin-bottom: 30px;
-}
-div {
-  display: flex;
-  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 15px;
 }
 
 /* Nav Styling */
@@ -102,4 +94,98 @@ footer {
 .img-wide {
   width: 700px;
   height: 400px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.img-med {
+  width: 700px;
+  height: 500px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.img-square {
+  width: 500px;
+  height: 400px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.img-small {
+  width: 420px;
+  height: 400px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.img-square-large {
+  width: 500px;
+  height: 500px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.img-large {
+  height: 600px;
+  width: 900px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Slideshow Styling */
+
+.carousel-inner {
+  height: 600px;
+  width: 800px;
+}
+#carouselExampleControls {
+  display: flex;
+  justify-content: center;
+}
+.dark-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background: #303030;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#carousel-ctrl-nxt-id {
+  width: 30%;
+}
+ol {
+  margin-left: 200px;
+  margin-right: 200px;
+  font-style: italic;
+}
+#timeline-center {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.timeline-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#stats-center {
+  margin-left: 550px;
+  margin-right: 200px;
+}
+.stats-item {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.stat-p {
+  text-align: left;
+}
+
+.body-font {
+  font-family: "Andada Pro", serif;
+}
+.small-hr {
+  width: 700px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
 }
