@@ -8,13 +8,14 @@ h1 {
 h2 {
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 25px;
+  font-size: 30px;
   text-align: center;
 }
 h3 {
   margin-top: 20px;
   margin-bottom: 20px;
   text-align: center;
+  font-size: 25px;
 }
 
 /* Text Styles */
@@ -174,7 +175,6 @@ ol {
 .stat-p {
   text-align: left;
 }
-
 .body-font {
   font-family: "Andada Pro", serif;
 }
@@ -188,4 +188,15 @@ ol {
     rgba(0, 0, 0, 0.75),
     rgba(0, 0, 0, 0)
   );
+  margin-top: 25px;
+}
+.image-space {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+#banner {
+  box-shadow: none;
+}
+body > div > img {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
